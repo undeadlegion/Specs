@@ -6,7 +6,8 @@ end
 
 namespace :travis do
   task :install_opencflite_debs do
-    sh "sudo apt-get install libc6"
+    sh "sudo apt-get update"
+    sh "sudo apt-get upgrade libc6"
 
     sh "mkdir -p .debs"
     Dir.chdir(".debs") do
