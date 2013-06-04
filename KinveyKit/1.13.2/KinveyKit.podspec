@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author       = { "Kinvey" => "support@kinvey.com" }
   s.platform     = :ios, '5.0'
   s.source       = { :git => 'https://github.com/Kinvey/KinveyKit.git', :tag => '1.13.2' }
-  s.source_files = '*'
+  s.source_files = '*, **/*'
 
   s.frameworks = 'Accounts', 'CFNetwork', 'CoreLocation', 'CoreTelephony', 'MobileCoreServices',
                  'Security', 'SystemConfiguration', 'Twitter', 'Foundation', 'UIKit', 'KinveyKit'
