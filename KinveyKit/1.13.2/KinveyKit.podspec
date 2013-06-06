@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files =  '**/*.h'
 
   s.frameworks = 'Accounts', 'CFNetwork', 'CoreLocation', 'CoreTelephony', 'MobileCoreServices',
-                 'Security', 'SystemConfiguration', 'Twitter', 'Foundation', 'UIKit'
+                 'Security', 'SystemConfiguration', 'Twitter', 'Foundation', 'UIKit', 'KinveyKit'
   s.documentation = {}
   s.preserve_paths = '*.framework', 'libUAirship*.a'
   s.libraries = 'z', 'sqllite3', 'UAirshipPush'
