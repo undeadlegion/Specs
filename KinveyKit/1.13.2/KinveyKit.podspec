@@ -13,13 +13,14 @@ Pod::Spec.new do |s|
   s.author       = { "Kinvey" => "support@kinvey.com" }
   s.platform     = :ios, '5.0'
   s.source       = { :git => 'https://github.com/Kinvey/KinveyKit.git', :tag => '1.13.2' }
-  s.source_files = '*, **/*'
+  s.source_files =  '**/*.h'
 
   s.frameworks = 'Accounts', 'CFNetwork', 'CoreLocation', 'CoreTelephony', 'MobileCoreServices',
-                 'Security', 'SystemConfiguration', 'Twitter', 'Foundation', 'UIKit', 'KinveyKit'
-  s.libraries = 'z', 'sqllite3', 'UAirshipPush-1.3.3'
+                 'Security', 'SystemConfiguration', 'Twitter', 'Foundation', 'UIKit'
   s.documentation = {}
-
-  s.xcconfig = { 'OTHER_LINKER_FLAGS' => '-ObjC' }
+  s.preserve_paths = '*.framework', 'libUAirship*.a'
+  s.libraries = 'z', 'sqllite3', 'UAirshipPush'
+ 
+  s.xcconfig = { 'OTHER_LINKER_FLAGS' => '-ObjC', 'LIBRARY_SEACH_PATHS' => '$(PODS_ROOT)/KinveyKit' }
 
 end
